@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e077c17bdd8624881dde35c5b35d1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 3
   viewAreaHandler: {fileID: 5830333093744364048}
   attackAreaHandler: {fileID: 817522770014740366}
 --- !u!58 &7415460701140517242
