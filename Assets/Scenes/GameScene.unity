@@ -361,6 +361,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   mainCamera: {fileID: 519420031}
+  projectilePrefab: {fileID: 4945982446514880757, guid: d4d13ed51e83a2d429ed3b9eb3a7b248, type: 3}
+  shootingPoint: {fileID: 808454243}
 --- !u!4 &1056393433
 Transform:
   m_ObjectHideFlags: 0

@@ -13,13 +13,22 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Camera mainCamera;
 
+    [Header("Look at Target System")]
+    [SerializeField]
+    private Projectile projectilePrefab;
+
+    [SerializeField]
+    private Transform shootingPoint;
+
     private MovementSystem movementSystem;
     private LookAtTargetSystem lookAtTargetSystem;
+    private ShootingSystem shootingSystem;
 
     private void Awake()
     {
         movementSystem = new MovementSystem(transform, speed);
         lookAtTargetSystem = new LookAtTargetSystem(transform);
+        shootingSystem = new ShootingSystem(projectilePrefab, shootingPoint);
     }
 
     private void Update()
@@ -39,5 +48,8 @@ public class Player : MonoBehaviour
 
         movementSystem.Move(movementDirection);
         lookAtTargetSystem.LookAt(cursorWorldPosition);
+
+        if (Input.GetMouseButtonDown(0))
+            shootingSystem.Shoot();
     }
 }
